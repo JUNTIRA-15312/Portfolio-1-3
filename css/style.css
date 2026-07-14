@@ -1,0 +1,351 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Kanit",sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#dff6ff,#cbe8ff,#eaf8ff);
+    min-height:100vh;
+    overflow-x:hidden;
+    color:#234;
+}
+
+/* ===========================
+   LOADING
+=========================== */
+
+#loading{
+    position:fixed;
+    inset:0;
+    background:#7dcfff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    color:white;
+    font-size:42px;
+    font-weight:bold;
+    animation:loadingFade 2s forwards;
+}
+
+@keyframes loadingFade{
+    0%{opacity:1;}
+    80%{opacity:1;}
+    100%{
+        opacity:0;
+        visibility:hidden;
+    }
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+
+    position:fixed;
+
+    left:20px;
+
+    top:20px;
+
+    width:240px;
+
+    height:calc(100vh - 40px);
+
+    background:rgba(255,255,255,.35);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    padding:35px;
+
+}
+
+.logo{
+
+    text-align:center;
+
+    font-size:28px;
+
+    color:#2196f3;
+
+    font-weight:700;
+
+    margin-bottom:40px;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar li{
+
+    margin-bottom:18px;
+
+}
+
+.sidebar a{
+
+    display:block;
+
+    color:#2d4f68;
+
+    text-decoration:none;
+
+    padding:14px 18px;
+
+    border-radius:18px;
+
+    transition:.35s;
+
+}
+
+.sidebar a:hover{
+
+    background:#89d2ff;
+
+    color:white;
+
+    transform:translateX(8px);
+
+}
+
+.active a{
+
+    background:#4fb6ff;
+
+    color:white;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    margin-left:300px;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.hero h3{
+
+    font-size:28px;
+
+    color:#4b90c8;
+
+}
+
+.hero h1{
+
+    font-size:70px;
+
+    margin:15px 0;
+
+}
+
+.hero span{
+
+    color:#2196f3;
+
+}
+
+.hero p{
+
+    font-size:24px;
+
+    color:#466;
+
+    margin-bottom:40px;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.btn{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#2196f3;
+
+    padding:18px 55px;
+
+    border-radius:50px;
+
+    font-size:22px;
+
+    transition:.4s;
+
+    box-shadow:0 0 25px rgba(33,150,243,.4);
+
+}
+
+.btn:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 45px #56c3ff;
+
+}
+
+/* ===========================
+   BINARY BACKGROUND
+=========================== */
+
+.binary{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+.binary span{
+
+    position:absolute;
+
+    color:rgba(0,132,255,.12);
+
+    animation:float linear infinite;
+
+    user-select:none;
+
+}
+
+@keyframes float{
+
+    from{
+
+        transform:translateY(110vh);
+
+    }
+
+    to{
+
+        transform:translateY(-120px);
+
+    }
+
+}
+
+/* ===========================
+   GLASS CARD
+=========================== */
+
+.card{
+
+    background:rgba(255,255,255,.35);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    margin-left:300px;
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#4b6f8d;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.sidebar{
+
+    width:100%;
+
+    height:auto;
+
+    left:0;
+
+    top:0;
+
+    border-radius:0;
+
+    position:relative;
+
+}
+
+.hero{
+
+    margin-left:0;
+
+    padding:60px 20px;
+
+}
+
+.hero h1{
+
+    font-size:48px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+}
