@@ -349,3 +349,40 @@ footer{
 }
 
 }
+/* ===========================
+   RIPPLE EFFECT
+=========================== */
+
+.btn{
+    position:relative;
+    overflow:hidden;
+}
+
+.ripple{
+
+    position:absolute;
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.7);
+
+    transform:scale(0);
+
+    animation:ripple .6s linear;
+
+}
+
+@keyframes ripple{
+
+    to{
+
+        transform:scale(25);
+
+        opacity:0;
+
+    }
+
+}
